@@ -1,0 +1,9 @@
+{
+  "name":"TP-friteadvisor",
+  "dependencies":{
+    "bootstrap":"*",
+    "font-awesome":"*",
+    "typeahead.js":"*",
+    "tinymce":"*"
+  }
+}

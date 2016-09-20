@@ -1,0 +1,19 @@
+{% extends '::base.html.twig' %}
+{# commentaire twig #}
+{% block body %}
+<div>
+  <h4> suppression article <h4>
+  <p>
+      Etes-vous certain de vouloir supprimer l'article "{{ article.nom }} {{ article.prenom }}" ?
+  </p>
+
+  <form action="{{ path('delete_confirm', {'id': article.id} ) }}" method="post">
+    <a href="{{ path('article_read') }}" class="btn btn-default">
+      <i class="glyphicon glyphicon-chevron-left"></i>
+      Retour à la liste
+    </a>
+    <input type="submit" <a href="{{ path('delete_confirm', {id: article.id}) }}" value="Supprimer" class="btn btn-danger"</a></>
+  </form>
+
+</div>
+{% endblock %}

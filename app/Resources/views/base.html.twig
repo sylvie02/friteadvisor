@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}{% endblock %}-friteadvisor</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
+        {% block stylesheets %}
+          {% stylesheets  '@vendor_css'
+                package='css' %}
+                <link rel="stylesheet" href="{{ asset_url }}" />
+          {% endstylesheets %}
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+    </head>
+
+    <body>
+        {% block nav %} {% include '::nav.html.twig' %}{% endblock %}
+        {% block body %}{% endblock %}
+
+        {% block javascripts %}
+        {% javascripts '@vendor_js'
+              package='js' %}
+              <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+        {% endblock %}
+
+    </body>
+</html>

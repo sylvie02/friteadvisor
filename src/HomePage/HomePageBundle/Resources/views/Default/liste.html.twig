@@ -1,0 +1,12 @@
+{% extends '::base.html.twig' %}
+{# commentaire twig #}
+{% block body %}
+<div>
+    <ul>
+      {% for articles in liste %}
+        <li>{{ articles.id }} {{ articles.nom }} {{ articles.prenom }} {{ articles.type }} <a href="{{ path('article_delete', {id: articles.id}) }}" class="btn btn-danger">Supprimer</a> <a href="{{ path('article_update', {id: articles.id}) }}"  class="btn btn-default">Modifier</a>
+</li>
+      {% endfor %}
+    </ul>
+</div>
+{% endblock %}

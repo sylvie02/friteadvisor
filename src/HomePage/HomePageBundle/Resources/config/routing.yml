@@ -1,0 +1,23 @@
+home_page_home_page_homepage:
+    path:     /
+    defaults: { _controller: HomePageHomePageBundle:Default:index }
+
+article_create:
+    path:     /create
+    defaults: { _controller: HomePageHomePageBundle:Default:create }
+
+article_read:
+    path:     /read
+    defaults: { _controller: HomePageHomePageBundle:Default:read }
+
+article_update:
+    path:  /{id}/update
+    defaults: { _controller: HomePageHomePageBundle:Default:update }
+
+article_delete:
+    path: /{id}/delete
+    defaults: { _controller: HomePageHomePageBundle:Default:delete }
+
+delete_confirm:
+    path: /{id}/confirm
+    defaults: { _controller: HomePageHomePageBundle:Default:confirm }
